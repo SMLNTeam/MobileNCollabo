@@ -1,6 +1,9 @@
 function addShape_rect(){  
     console.log("rect");
     editor.addShape('rect', {
+      fill:{
+        color:'transparent'
+      },
       stroke: 'black',
       strokeWidth: 3,
       width: 50,
@@ -13,7 +16,7 @@ function addShape_rect(){
 
 function addShape_circle(){  
   editor.addShape('circle', {
-    
+    fill:'transparent',
     stroke: 'black',
     strokeWidth: 3,
     rx: 30,
@@ -24,7 +27,9 @@ function addShape_circle(){
 
 function addShape_triangle(){  
   editor.addShape('triangle', {
-
+    fill:{
+      color:'transparent'
+    },
     stroke: 'black',
     strokeWidth: 3,
     width: 50,

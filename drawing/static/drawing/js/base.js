@@ -10,6 +10,8 @@ var editor = new tui.ImageEditor('#tui-image-editor', {
   
  }, 1000);
  */
+
+
 function loadImage_file(){
   var file = document.querySelector('#il');
   editor.loadImageFromFile(file.files[0]).then(result => {
@@ -31,22 +33,37 @@ function loadImage_file(){
   }, 10);
 }
 
-function applyFilter(){
+function applyFilter_Grayscale(){
   editor.applyFilter('Grayscale');
 } //이미지가 로드 되어야 함.
 
+function applyFilter_Noise(){
+  editor.applyFilter('Noise');
+} 
+function applyFilter_Sepia(){
+  editor.applyFilter('Sepia');
+} 
+function applyFilter_Emboss(){
+  editor.applyFilter('Emboss');
+} 
+function applyFilter_Pixelate(){
+  editor.applyFilter('Pixelate');
+} 
+function applyFilter_Invert(){
+  editor.applyFilter('Invert');
+} 
+function applyFilter_Sharpen(){
+  editor.applyFilter('Sharpen');
+} 
 //--------------------------------
 function addText(){
   editor.addText('abcd', {
     styles: {
         fill: '#000',
-        fontSize: 20,
+        fontSize: 30,
         fontWeight: 'bold'
     },
-    position: {
-        x: 100,
-        y: 100
-    }
+    autofocus:false
 }).then(objectProps => {
     console.log(objectProps.id);
 });

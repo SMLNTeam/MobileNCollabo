@@ -22,6 +22,11 @@
         <script src="{% static 'drawing/js/addIcon.js'%}"></script>
         <script src="{% static 'drawing/js/addShape.js'%}"></script>
 
+        <script>
+             editor.loadImageFromURL('{% static 'drawing/img/test.jpg' %}', 'lena');
+        </script>
+        
+        
         <div class="addShape">
             <button onClick='addShape_triangle()'>add triangle</button>
             <button onClick='addShape_circle()'>add circle</button>
@@ -30,6 +35,7 @@
         <div class="addIcon">
             <button onClick='addIcon_arrow()'>add arrow</button>
             <button onClick='addIcon_cancel()'>add cancel</button>
+            <button onClick='changeIconColor()'>changeIconColor</button>
             <button onClick='addText()'>add text</button>
         </div>
         <div class="image">
@@ -37,7 +43,14 @@
             <button onClick="loadImage_file()">load</button>
         </div>
         <div>
-            <button onClick="applyFilter()">Filter</button>
+            <button onClick=" applyFilter_Grayscale()">Grayscale</button>
+            <button onClick=" applyFilter_Noise()">Noise</button>
+            <button onClick=" applyFilter_Sepia()">Sepia</button>
+            <button onClick=" applyFilter_Emboss()">Emboss</button>
+            <button onClick=" applyFilter_Pixelate()">Pixelate</button>
+            <button onClick=" applyFilter_Invert()">Invert</button>
+            <button onClick=" applyFilter_Sharpen()">Sharpen</button>
+            
         </div>
     </body>
 </html>
